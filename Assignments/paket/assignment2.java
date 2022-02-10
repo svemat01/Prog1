@@ -16,6 +16,9 @@ public class assignment2 {
         double highestInput = highest(inputs, inputCount); // Grab highest value from double array
         double lowestInput = lowest(inputs, inputCount); // Grab lowest value from double array
 
+        System.out.printf("Highest number: %s\n", highestInput);
+        System.out.printf("Lowest number: %s\n", lowestInput);
+
         return highestInput - lowestInput;
     }
 
