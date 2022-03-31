@@ -25,11 +25,10 @@ public class PhoneBook {
     private ArrayList<Post> contactList;
     private String filter = "";
 
-//    private FileManager fileManager = new FileManager("phonebook.txt");
-
 //    Constructor
     PhoneBook() {
 
+//        Create collection to store Contacts
         contactList = new ArrayList<Post>();
 
         JFrame frame = new JFrame("Phonebook");
@@ -44,6 +43,7 @@ public class PhoneBook {
         contacts.setModel(contactListModel);
 
 //        Button listeners
+
         addButton.addActionListener(e -> addContact());
         removeButton.addActionListener(e -> removeContact(frame));
         editButton.addActionListener(e -> updateContact(frame));
@@ -94,6 +94,7 @@ public class PhoneBook {
 //        Get selected and remove it then reload
         int index = contacts.getSelectedIndex();
 
+//        index is -1 if nothing is selected
         if (index < 0) {
             JOptionPane.showMessageDialog(frame, "Please select a contact.");
             return;
